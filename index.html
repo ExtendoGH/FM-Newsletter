@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Newsletter component for improving front-end skills by building projects on Frontend Mentor." />
+    <meta name="keywords" content="HTML, CSS, Newsletter, CSS GRID,  Frontend Mentor, Frontend Development" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <!-- Main Form Wrapper -->
+    <main class="form">
+      <div class="form__container">
+        <div class="form-image-col">
+          <picture class="form__image">
+            <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1440px)" />
+            <img class="form__image--mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="Success icon" />
+          </picture>
+        </div>
+
+        <div class="form__content-col">
+          <div class="form__text-box">
+            <h1 class="form__title">Stay updated!</h1>
+            <h2 class="form__description">Join 60,000+ product managers receiving monthly updates on:</h2>
+            <ul class="form__list">
+              <li class="form__list-item">Product discovery and building what matters</li>
+              <li class="form__list-item">Measuring to ensure updates are a success</li>
+              <li class="form__list-item">And much more!</li>
+            </ul>
+          </div>
+
+          <form class="form__form" id="form" action="#" method="post" novalidate>
+            <label class="form__label" for="email">Email address</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="email@company.com" required />
+            <span class="form__error-message" id="email-error" aria-live="polite">Valid email required</span>
+            <button class="form__button" type="submit">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Success message popup, hidden by default -->
+      <div class="form__popup hidden" aria-labelledby="popup-title" role="dialog" aria-modal="true">
+        <img src="assets/images/icon-success.svg" class="form__popup-image" alt="Success icon" />
+        <h2 id="popup-title" class="form__popup-title">Thanks for subscribing!</h2>
+        <p class="form__popup-description">
+          A confirmation email has been sent to <strong class="form__popup-email">ash@loremcompany.com</strong>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button class="form__popup-button" type="button">Dismiss message</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
