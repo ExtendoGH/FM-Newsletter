@@ -313,8 +313,9 @@ body {
 @media only screen and (min-width: 1440px) {
     body {
         display: flex;
-        align-content: center;
+        align-items: center;
         justify-content: center;
+        height: 100vh;
     }
 
     .form__container {
@@ -322,10 +323,6 @@ body {
         grid-template-columns: 1fr 1fr;
         padding: 2.4rem 3.2rem;
         gap: 6.4rem;
-    }
-
-    .form {
-        margin: 21.9rem 26.8rem;
     }
 
     .form__content-col {
